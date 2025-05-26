@@ -18,9 +18,11 @@
               {{ index + 1 }}
             </button>
           </nav>
+          <div class="text2">
           <h3>The terminology...</h3>
           <h2>{{ selectedTech?.name }}</h2>
           <p>{{ selectedTech?.description }}</p>
+          </div>
         </div>
         <div class="technology-image">
           <picture>
@@ -36,7 +38,11 @@
 </template>
 
 <script>
+import NavBar  from './NavBar.vue';
 export default {
+  components:{
+    NavBar
+  },
   name: 'TechnologyPage',
   data() {
     return {
